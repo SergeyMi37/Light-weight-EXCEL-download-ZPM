@@ -1,4 +1,4 @@
-/// example of a extra light output to EXCEL
+/// example of a extra light output to EXCEL 
 /// it is expected to run in namespace SAMPLES
 Class DC.EXCELlight Extends %CSP.Page
 {
