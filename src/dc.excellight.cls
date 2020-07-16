@@ -48,7 +48,7 @@ ClassMethod toFile(filename As %String) As %Status
 	use filename
 	set sc=..OnPage()
 	close file
-	quit sc
+	quit sc 
 }
 
 }
