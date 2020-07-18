@@ -1,7 +1,8 @@
-Class DC.EXCELlight Extends %CSP.Page
-{
 /// example of an extra light output to EXCEL 
 /// it is expected to run in namespace SAMPLES
+Class DC.EXCELlight Extends %CSP.Page
+{
+
 
 /// Event handler for <b>PreHTTP</b> event: this is invoked before
 /// the HTTP headers for a CSP page have been sent.  All changes to the
