@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Export generator="Cache" version="25">
+<Class name="DC.EXCELlight">
+<Description>
+example of a extra light output to EXCEL
+it is expected to run in namespace SAMPLES</Description>
+<Super>%CSP.Page</Super>
+<TimeChanged>65578,82767.884276</TimeChanged>
+<TimeCreated>65479,35893.446909</TimeCreated>
+
+<Method name="OnPreHTTP">
+<Description><![CDATA[
+Event handler for <b>PreHTTP</b> event: this is invoked before
+the HTTP headers for a CSP page have been sent.  All changes to the
+<class>%CSP.Response</class> class, such as adding cookies, HTTP headers,
+setting the content type etc. must be made from within the OnPreHTTP() method.
+Also changes to the state of the CSP application such as changing
+%session.EndSession or %session.AppTimeout must be made within the OnPreHTTP() method.
+It is prefered that changes to %session.Preserve are also made in the OnPreHTTP() method
+as this is more efficient, although it is supported in any section of the page.
+Return <b>0</b> to prevent <method>OnPage</method> from being called.]]></Description>
+<ClassMethod>1</ClassMethod>
+<ReturnType>%Boolean</ReturnType>
+<ServerOnly>1</ServerOnly>
+<Implementation><![CDATA[
+	set %response.ContentType="application/vnd.ms-excel"
+	quit $$$OK
+]]></Implementation>
+</Method>
+
+<Method name="OnPage">
+<ClassMethod>1</ClassMethod>
+<ReturnType>%Status</ReturnType>
+<Implementation><![CDATA[
+	set sqlStatement="SELECT TOP 23 ID,Name,%ODBCOUT(DOB) DOB,SSN FROM Sample.Person"
+		,query = ##class(%ResultSet).%New()
+		,sc = query.Prepare(sqlStatement)
+	set:sc sc=query.Execute()
+	quit:'sc sc
+	set cols=query.GetColumnCount()
+	write "<table border=1>",!,"<tr>"
+	for col=1:1:cols {
+		write "<th align=left><b>"_query.GetColumnHeader(col)_"</b></th>"
+	}
+	while query.Next() {
+		write "</tr>",!,"<tr>"
+		for col=1:1:cols { 
+			write "<td>"_query.GetData(col)_"</td>"
+		}
+	}
+	write "</tr>",!,"</table>"
+	quit $$$OK
+]]></Implementation>
+</Method>
+
+<Method name="toFile">
+<Description>
+filename should end with ".html"</Description>
+<ClassMethod>1</ClassMethod>
+<FormalSpec>filename:%String</FormalSpec>
+<ReturnType>%Status</ReturnType>
+<Implementation><![CDATA[
+	open filename:"WNS":1 
+	else   quit $system.Status.Error(5005,filename)
+	use filename
+	set sc=..OnPage()
+	close file
+	quit sc
+]]></Implementation>
+</Method>
+</Class>
+</Export>
