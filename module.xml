@@ -8,7 +8,7 @@
       <Keywords>CSP, CLS</Keywords>
       <Packaging>module</Packaging>
       <SourcesRoot>src</SourcesRoot>
-       <Resource Name="dc.excellight.CLS"/>
+       <Resource Name="DC.PKG"/>
     </Module>
   </Document>
 </Export>
