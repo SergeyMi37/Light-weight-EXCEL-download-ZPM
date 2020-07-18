@@ -3,7 +3,6 @@
 Class DC.EXCELlight Extends %CSP.Page
 {
 
-
 /// Event handler for <b>PreHTTP</b> event: this is invoked before
 /// the HTTP headers for a CSP page have been sent.  All changes to the
 /// <class>%CSP.Response</class> class, such as adding cookies, HTTP headers,
