@@ -18,12 +18,10 @@ set %response.ContentType="application/vnd.ms-excel"
 
 Now when you call the class with your browser you get asked to open or to save it.   
 Next , because the extenison is .cls you get asked for the program to open it.  
-like this:   
-^^^^^^ ![https://raw.githubusercontent.com/rcemper/Light-weight-EXCEL-download-ZPM/master/oxls.jpg](oxls.jpg)
+like this: (https://raw.githubusercontent.com/rcemper/Light-weight-EXCEL-download-ZPM/master/oxls.jpg)
 
 And if you select EXCEL (or any compatible tool) the table is ready for the user to work with it.  
-as this:   
-^^^^^^ ![https://raw.githubusercontent.com/rcemper/Light-weight-EXCEL-download-ZPM/master/xls.jpg](xls.jpg)  
+as this: (https://raw.githubusercontent.com/rcemper/Light-weight-EXCEL-download-ZPM/master/xls.jpg)  
 
 # Summary:
 
