@@ -38,3 +38,5 @@ Well suited to serve a wide distributed population of users.
 Rather small size of code with simple structure
 
 Now you will understand why I titled it "Light Weight"
+
+[Article in DC](https://community.intersystems.com/post/light-weight-excel-download)
