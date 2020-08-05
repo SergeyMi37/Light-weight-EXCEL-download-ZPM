@@ -3,8 +3,7 @@
    It will not be kept in synch with new versions   
    It is also NOT serviced by InterSystems Support !
 ~~~
-The full story is available here
-https://community.intersystems.com/post/light-weight-excel-download
+The full story is available on [DeveloperCommunity](https://community.intersystems.com/post/light-weight-excel-download)
 
 But here's the light weight export to EXCEL.
 
@@ -19,10 +18,10 @@ set %response.ContentType="application/vnd.ms-excel"
 
 Now when you call the class with your browser you get asked to open or to save it.
 Next , because the extenison is .cls you get asked for the program to open it.
-like this: https://raw.githubusercontent.com/rcemper/Light-weight-EXCEL-download-ZPM/master/oxls.jpg
+like this: (https://raw.githubusercontent.com/rcemper/Light-weight-EXCEL-download-ZPM/master/oxls.jpg)
 
 And if you select EXCEL (or any compatible tool) the table is ready for the user to work with it.
-as this: https://raw.githubusercontent.com/rcemper/Light-weight-EXCEL-download-ZPM/master/xls.jpg
+as this: (https://raw.githubusercontent.com/rcemper/Light-weight-EXCEL-download-ZPM/master/xls.jpg)
 
 # Summary:
 
