@@ -3,7 +3,7 @@
   <Document name="excel-light.ZPM">
     <Module>
       <Name>excel-light</Name>
-      <Version>1.0.1</Version>
+      <Version>1.0.2</Version>
       <Description>Light weight Excel export over CSP</Description>
       <Keywords>CSP, CLS</Keywords>
       <Packaging>module</Packaging>
